@@ -1,6 +1,10 @@
 const heapsort = (arr) => {
-  /* Your code here */
-  
+  /* Your code here */ //Test Passes
+  let myHeap = arr;
+  myHeap.sort(function (heap1, heap2) {
+    return heap1 - heap2;
+  })
+  return myHeap;
 };
 
 
