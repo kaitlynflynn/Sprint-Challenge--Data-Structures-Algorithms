@@ -18,13 +18,15 @@ class BinarySearchTree {
 
   breadthFirstForEach(cb) {
     /* Your code here */ //Test not passing
-    let nodes = [this];
-    for (let i = 0; i < nodes.length; i++) {
-      let binaryTree = nodes[i];
-
-      if(binaryTree.left) nodes.push(binaryTree.left);
-      if(binaryTree.right) nodes.push(binaryTree.right);
-      cd(binaryTree.value);
+    let currentNodes = [this];
+    while (currentNodes.length > 0) {
+      let nextNode = [];
+      for (let myNode of currentNodes) {
+        cb(myNode.value);
+        if (myNode.left) nextNode.push(myNode.left);
+        if (myNode.right) nextNode.push(myNode.right);
+      }
+      currentNodes = nextNode;
     }
   }
 
