@@ -1,4 +1,5 @@
 ## Big-O Notation Notes
+(my notes in effort to better understand Big-O Notation)
 
 ## O(1)
 * constant time
